@@ -42,11 +42,9 @@ class Producer_Request_Block(block_parent.Block):
         return hasher.hexdigest()
 
     def equals(self, other):
-        if (type(other) != "<class '__main__.Producer_Request_Block'>"):
+        if (type(other) != type(self)):
             return False
-        return (self.hash == other.hash
-                and self.type_code == other.type_code
-                and self.previous_hash == other.previous_hash
+        return (self.type_code == other.type_code
                 and self.item_requested == other.item_requested
                 and self.number_of_item_requested == other.number_of_item_requested
                 and self.request_name == other.request_name)

@@ -46,10 +46,9 @@ class Transport_Block(block_parent.Block):
         return hasher.hexdigest()
 
     def equals(self, other):
-        if (type(other) != "<class '__main__.Product_Block'>"):
+        if (type(other) != type(self)):
             return False
-        return (self.hash == other.hash and self.type_code == other.type_code
-                and self.previous_hash == other.previous_hash
+        return (self.type_code == other.type_code
                 and self.contents_of_shipment == other.contents_of_shipment
                 and self.number_of_item == other.number_of_item
                 and self.truck_id == other.truck_id

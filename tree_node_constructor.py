@@ -9,9 +9,9 @@ def construct_tree_node(parent, filename):
     if (parent is not None):
         current_block.previous_hash = parent.data_block.hash
 
-    tree_node = Tree_Node(current_block)
+    node = tree_node.Tree_Node(current_block)
 
     if (parent is not None):
-        parent.child_list.append(tree_node)
-        
-    return tree_node
+        parent.child_list.append(node)
+
+    return node
