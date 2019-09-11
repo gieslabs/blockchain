@@ -1,10 +1,19 @@
 import block_parent
 import inspect
 
+"""
+See "producer_request_block.py" for general explanation of fields and methods in block classes
+"""
+
 class Transport_Block(block_parent.Block):
     hash = ""
+    """
+    type_code is an internal code appended to every information
+    json by the front end to tell which type of block the json is supposed to represent
+    """
     type_code = ""
     previous_hash = ""
+    #Identification code for the truck so shipments can be individually tracked
     truck_id = ""
     contents_of_shipment = ""
     number_of_item = 0

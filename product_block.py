@@ -1,8 +1,16 @@
 import block_parent
 import inspect
 
+"""
+See "producer_request_block.py" for general explanation of fields and methods in block classes
+"""
+
 class Product_Block(block_parent.Block):
     hash = ""
+    """
+    type_code is an internal code appended to every information
+    json by the front end to tell which type of block the json is supposed to represent
+    """
     type_code = ""
     previous_hash = ""
     item_name = ""

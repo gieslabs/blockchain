@@ -1,10 +1,19 @@
 import block_parent
 import inspect
 
+"""
+See "producer_request_block.py" for general explanation of fields and methods in block classes
+"""
+
 class Supplier_Block(block_parent.Block):
     hash = ""
+    """
+    type_code is an internal code appended to every information
+    json by the front end to tell which type of block the json is supposed to represent
+    """
     type_code = ""
     previous_hash = ""
+    #A unique ID given to suppliers for identification
     supplier_id = ""
     number_of_item = 0
     item_supplied = ""

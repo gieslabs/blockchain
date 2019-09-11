@@ -2,6 +2,10 @@ import json_reader
 import json_deserializer
 import tree_node
 
+"""
+This method constructs a tree node with a data_block represented by the file
+It also checks the parents to get the previous hash for the data block
+"""
 def construct_tree_node(parent, filename):
     current_dict = json_reader.Load_Json(filename)
     current_block = json_deserializer.Desz(current_dict)
